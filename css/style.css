@@ -1,0 +1,150 @@
+:root {
+  --main-color: #49D1ED;
+  --secandry-color: #1E202B;
+}
+
+/* ===== General ===== */
+body {
+  background-color: var(--secandry-color);
+  font-family: "Poppins", sans-serif;
+}
+
+.allPage {
+  background-image: url(../image/banner.png);
+  background-repeat: no-repeat;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  background-color: var(--secandry-color);
+  padding: 30px 0;
+}
+.navbar button,
+.allPage button {
+  background-color: var(--main-color);
+}
+.navbar img {
+  width: 60px;
+  /* height: 30px; */
+}
+
+.navbar-brand p {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.navbar .nav-link {
+  color: #fff;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+  color: var(--main-color);
+  border-color: var(--main-color);
+}
+
+/* ===== Search ===== */
+.search-input input {
+  background-color: var(--secandry-color);
+}
+
+.search-input input::placeholder {
+  color: #aaa;
+}
+
+.search-input input:focus,
+.footer input:focus {
+  box-shadow: none;
+  outline: none;
+  background-color: var(--secandry-color);
+}
+
+/* ===== Cards ===== */
+.bg-dark-1 {
+  background-color: #323544;
+}
+
+.bg-dark-2 {
+  background-color: #262936;
+}
+
+.bg-dark-3 {
+  background-color: #2D303D;
+}
+
+.roundedLeft {
+  border-top-left-radius: .5rem !important;
+}
+
+.roundedRight {
+  border-top-right-radius: .5rem !important;
+}
+
+.weather-card {
+  color: #fff;
+  height: 450px;
+}
+
+.degree {
+  font-size: 80px;
+  font-weight: 700;
+}
+
+.status {
+  color: var(--main-color);
+  font-weight: 600;
+}
+
+.text-gray {
+  color: #ccc;
+}
+
+/* ===== Footer ===== */
+.footer {
+  background-color: #262936;
+}
+
+.footer input {
+  background-color: #1E202B;
+}
+
+.footer input::placeholder {
+  color: #aaa;
+}
+
+.footer input:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.social-link {
+  color: var(--main-color);
+  background-color: #1E202B;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.social-link:hover {
+  color: #fff;
+  background-color: var(--main-color);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 991px) {
+  .weather-card {
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+}

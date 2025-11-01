@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather</title>
+
+  <link rel="icon" type="image/png" sizes="127x76" href="./image/rainy-day.png">
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/all.min.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container px-5">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="./image/rainy-day.png" alt="logo" class="me-2">
+        <div class="text-white">
+          <h3 class="m-0 fs-5">Weather</h3>
+          <p class="m-0">tagline goes here</p>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto text-center">
+          <li class="nav-item"><a href="#" class="nav-link active px-3 py-0 mx-3">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-3 py-0 mx-3">News</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-3 py-0 mx-3">Live cameras</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-3 py-0 mx-3">Photos</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-3 py-0 mx-3">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="allPage overflow-auto">
+    <!-- Search Bar -->
+    <section class="container px-5 my-5">
+      <div class="search-input position-relative mx-auto">
+        <input type="text" id="searchInput" placeholder="Find Your Location"
+          class="form-control p-3 rounded-5 text-white border-0" />
+        <button id="findBtn"
+          class="btn btn-info text-white rounded-5 position-absolute top-50 end-0 translate-middle-y me-2 px-4">Find</button>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Weather Cards -->
+    <section class="container px-5 mt-5">
+      <div class="row g-0  text-white">
+        <!-- Today -->
+        <div id="day1" class="col-lg-4">
+
+          <div class="weather-card bg-dark-1 rounded-start-3">
+            <div class="card-header d-flex justify-content-between px-3 py-2 bg-dark-2 roundedLeft">
+              <span id="day1Name">Thursday</span>
+              <div>
+                <span id="day1Date">31 </span>
+                <span id="monthName"></span>
+              </div>
+            </div>
+
+            <div class="p-3">
+              <p id="cityName" class=" my-3">Cairo</p>
+              <h2 id="day1Temp" class="degree my-4 d-inline-block">32C</h2>
+              <p class="d-inline-block degree">° C</p>
+              <img id="day1Icon" class="my-4 d-block" src="" alt="icon" width="64" />
+              <p id="day1Status" class="status">Partly cloudy</p>
+
+              <div class="d-flex justify-content-between w-75 gap-4 mt-4 small text-gray">
+                <div class="d-flex align-items-center gap-2">
+                  <img src="./image/icon-umberella.png" alt="" width="20" />
+                  <span id="day1Humidity" class="m-0"></span>
+                  <span>%</span>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <img src="./image/icon-wind.png" alt="" width="20" />
+                  <span id="day1Wind">18 km/h</span>
+                  <span>km/h</span>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <img src="./image/icon-compass.png" alt="" width="20" />
+                  <span id="day1WindDir">NNE</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Tomorrow -->
+        <div class="col-lg-4 text-center">
+          <div class="weather-card bg-dark-2">
+            <div class="card-header text-center bg-dark-3 py-2">
+              <span class="dayName">Friday</span>
+            </div>
+            <div class="p-4">
+              <img class="dayIcon my-5" src="" alt="icon" width="64" />
+              <div>
+                <h3 class="dayMaxTemp d-inline-block my-3">24°C</h3>
+                <span class="fs-3">° C</span>
+              </div>
+              <p class="dayMinTemp d-inline-block text my-3">18°C</p>
+              <span class="fs-6">° C</span>
+              <p class="dayStatus status">Sunny</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- After Tomorrow -->
+        <div class="col-lg-4 text-center">
+          <div class="weather-card bg-dark-1 rounded-end-3">
+            <div class="card-header text-center bg-dark-2 py-2 roundedRight">
+              <span class="dayName">Saturday</span>
+            </div>
+            <div class="p-4">
+              <img class="dayIcon my-5" src="" alt="icon" width="64" />
+              <div>
+                <h3 class="dayMaxTemp d-inline-block my-3">24°C</h3>
+                <span class="fs-3">° C</span>
+              </div>
+              <p class="dayMinTemp d-inline-block text my-3">18°C</p>
+              <span class="fs-6">° C</span>
+              <p class="dayStatus status">Cloudy</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer mt-5 py-4">
+      <div class="container px-5 d-flex flex-column flex-lg-row justify-content-between align-items-center">
+        <div class="w-75 w-lg-50 mb-3 mb-lg-0 position-relative">
+          <input type="text" placeholder="Your Email" class="form-control p-3 rounded-5 text-white border-0" />
+          <button
+            class="btn btn-info text-white rounded-5 position-absolute top-50 end-0 translate-middle-y me-2 px-4">Subscribe</button>
+        </div>
+        <ul class="d-flex justify-content-center justify-content-lg-end gap-3 list-unstyled mb-0">
+          <li><a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a></li>
+          <li><a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="#" class="social-link"><i class="fa-brands fa-linkedin"></i></a></li>
+          <li><a href="#" class="social-link"><i class="fa-brands fa-pinterest"></i></a></li>
+        </ul>
+      </div>
+      <p class="container px-5 text-gray my-5">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+    </footer>
+  </main>
+
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
